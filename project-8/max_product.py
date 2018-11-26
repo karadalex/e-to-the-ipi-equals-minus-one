@@ -1,10 +1,11 @@
 import sys
 
 """
+First solution
 num: digits in string form
 r:   lenght/range of each product group
 """
-def findMaxProduct(num, r):
+def findMaxProduct1(num, r):
     maxProduct = 0
     for i in range(len(num)-r):
         product = 1
@@ -15,6 +16,7 @@ def findMaxProduct(num, r):
             maxProduct = product
 
     return maxProduct
+    
 
 if __name__ == '__main__':
     # Load file with a big number
@@ -26,4 +28,4 @@ if __name__ == '__main__':
     numberString = numberString.replace("\n", "")
     groupLength = int(sys.argv[2])
     
-    print(findMaxProduct(numberString, groupLength))
+    print(findMaxProduct2(numberString, groupLength))
